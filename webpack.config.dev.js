@@ -17,7 +17,10 @@ module.exports = {
   devServer: {
     stats: "minimal",
     overlay: true,
-    historyApiFallback: true
+    historyApiFallback: true,
+    disableHostCheck: true,
+    headers: { "Access-Control-Allow-Origin": "*" },
+    https: false
   },
   plugins: [
     new HtmlWebpackPlugin({
